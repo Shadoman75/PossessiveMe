@@ -47,30 +47,20 @@ public final class MePlugin extends JavaPlugin {
 					}
 					// argument loop end...
 					// PLAYER LOOPZ!
-					if(sender.isOp())
-						Bukkit.broadcastMessage(ChatColor.GREEN + "-" + sender.getName() + "'s" + buffer.toString());
+					if(sender.isOp()){
+						Bukkit.broadcastMessage(ChatColor.GREEN + "-" + " " + sender.getName() + "'s" + buffer.toString());
 						return true;
 						
 					} else {
 						// ARGUMENT LOOP START!
-						StringBuilder buffer = new StringBuilder();
-
-						for(int i = 0; i < args.length; i++)
-						{
-							buffer.append(' ').append(args[i]);
-						}
-						// argument loop end..
+						
 						for(Player p:((Player)sender).getWorld().getPlayers()){
 							// and the message will be sent here :o
 							p.sendMessage(ChatColor.AQUA + "~" + " " + sender.getName() + "'s" + buffer.toString());
 							return true;
-						
-						
-						
-						
-						
-					}
-				} 
+						}
+					} 
+				}
 			}
 		}
 		return false;
