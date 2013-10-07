@@ -1,0 +1,8 @@
+name: MePlugin
+main: info.insomniax.shadoman75.bukkit.MePlugin
+version: 0.0.1
+depend: [Vault]
+commands:
+  pme:
+    description: shows possession of something
+    usage: /pme [message]
